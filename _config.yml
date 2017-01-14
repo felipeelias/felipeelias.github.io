@@ -19,7 +19,7 @@ google-analytics:
 disqus:
   id: thisisfine
 url: https://felipeelias.github.io
-logo: /assets/icon.png
+logo: /assets/icon.jpg
 baseurl:
 timezone: Europe/Warsaw
 paginate: 10
@@ -57,7 +57,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/icon.png
+      image: /assets/icon.jpg
 gems:
   - jekyll-paginate
   - jekyll-mentions
