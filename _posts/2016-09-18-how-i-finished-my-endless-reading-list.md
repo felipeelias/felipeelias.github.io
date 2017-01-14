@@ -4,7 +4,7 @@ title:  "How I finished my endless reading list"
 date:   2016-09-18 10:00:00 +0100
 description: "Steps I took to finish my endless reading list"
 permalink: /how-i-finished-my-reading-list
-tags: picks
+tags: productivity
 comments: true
 ---
 
