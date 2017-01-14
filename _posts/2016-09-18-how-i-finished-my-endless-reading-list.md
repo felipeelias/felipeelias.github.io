@@ -71,7 +71,7 @@ How about you? Do you also have a long reading list? Let me know in the comments
 Have a nice week!
 
 [100]: http://blog.fogus.me/2015/11/04/the-100101-method-my-approach-to-open-source/
-[getpocket]: getpocket.com
+[getpocket]: http://getpocket.com
 [ifttt]: https://ifttt.com/recipes/112234-when-you-like-a-tweet-automatically-save-the-link-from-it-to-your-pocket-account
 [foma]: https://en.wikipedia.org/wiki/Fear_of_missing_out
 [op-cost]: https://en.wikipedia.org/wiki/Opportunity_cost
