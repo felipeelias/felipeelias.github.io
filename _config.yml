@@ -1,0 +1,53 @@
+name: felipe
+author:
+  name: Felipe Philipp
+  twitter: felipeelias
+  github: felipeelias
+  linkedin: felipeeliasphilipp
+google-analytics:
+  id: UA-73548507-1
+disqus:
+  id: thisisfine
+url: https://felipeelias.github.io
+baseurl:
+timezone: Europe/Warsaw
+paginate: 10
+paginate_path: /page:num/
+markdown: kramdown
+kramdown:
+  input: GFM
+nav:
+  - name: "About"
+    url:  "/about"
+  - name: "Projects"
+    url:  "/projects"
+  - name: "Archive"
+    url:  "/archive"
+  - name: "Tags"
+    url:  "/tags"
+  - name: "Github"
+    url:  "https://github.com/felipeelias"
+sass:
+  sass_dir: _sass
+  style: :compressed
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+gems:
+  - jekyll-paginate
+  - jekyll-mentions
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude: [vendor]
+jekyll-mentions:
+  base_url: https://twitter.com
