@@ -3,8 +3,8 @@ layout: post
 title:  "mysql2 gem installation hell"
 date:   2016-04-08 10:00:00 +0100
 description: "Install older version of MySQL (5.5) and mysql2 gem with homebrew"
-permalink: /march-picks
 tags: [mysql, ruby]
+categories: mysql
 comments: true
 ---
 
