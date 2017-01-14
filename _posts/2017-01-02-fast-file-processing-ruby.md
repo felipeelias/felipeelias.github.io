@@ -4,6 +4,7 @@ title:  "Optimal way of processing large files in Ruby"
 date:   2017-01-02
 description: "Fast processing of large files in Ruby with low memory consumption"
 tags: ruby
+categories: ruby
 comments: true
 ---
 

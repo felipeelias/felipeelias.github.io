@@ -4,6 +4,7 @@ title:  "RabbitMQ with Exponential Backoff"
 date:   2016-02-22 20:00:00 +0100
 description: "How to create a proper retry mechanism on top of RabbitMQ using exponential backoff"
 tags: rabbitmq
+categories: rabbitmq
 comments: true
 ---
 
