@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/felipeelias
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://felipeelias.github.io
+  * I am felipeelias (https://keybase.io/felipeelias) on keybase.
+  * I have a public key ASBWF2cgrOfeZhxuQxp1hvTFrfNuH8IxuGaYLgZOixwj9Ao
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012097be05c58110cede0cd8bdf47d4365762bda6b6b844be64bfeafc3371282a67d0a",
+            "host": "keybase.io",
+            "kid": "012056176720ace7de661c6e431a7586f4c5adf36e1fc231b866982e064e8b1c23f40a",
+            "uid": "8aac54a8c4425298ff0384cd17efef19",
+            "username": "felipeelias"
+        },
+        "service": {
+            "hostname": "felipeelias.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1485097850,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1485097358,
+        "hash": "9bf33965d69dbc9e48dd7cb65a13ac36db21ff1c81c9f2f8760fa75369311d2b8291296e05ae8f8fe9afa3df82500e8c09cba5fa5e662ea84795c20efcf93fb9",
+        "seqno": 811337
+    },
+    "prev": "16b9f5c287db0aa89c1d0695422a97695d27ea8547089276cf066e45708f98ec",
+    "seqno": 21,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgVhdnIKzn3mYcbkMadYb0xa3zbh/CMbhmmC4GToscI/QKp3BheWxvYWTFAwF7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOTdiZTA1YzU4MTEwY2VkZTBjZDhiZGY0N2Q0MzY1NzYyYmRhNmI2Yjg0NGJlNjRiZmVhZmMzMzcxMjgyYTY3ZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTYxNzY3MjBhY2U3ZGU2NjFjNmU0MzFhNzU4NmY0YzVhZGYzNmUxZmMyMzFiODY2OTgyZTA2NGU4YjFjMjNmNDBhIiwidWlkIjoiOGFhYzU0YThjNDQyNTI5OGZmMDM4NGNkMTdlZmVmMTkiLCJ1c2VybmFtZSI6ImZlbGlwZWVsaWFzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJmZWxpcGVlbGlhcy5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4xOCJ9LCJjdGltZSI6MTQ4NTA5Nzg1MCwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDg1MDk3MzU4LCJoYXNoIjoiOWJmMzM5NjVkNjlkYmM5ZTQ4ZGQ3Y2I2NWExM2FjMzZkYjIxZmYxYzgxYzlmMmY4NzYwZmE3NTM2OTMxMWQyYjgyOTEyOTZlMDVhZThmOGZlOWFmYTNkZjgyNTAwZThjMDljYmE1ZmE1ZTY2MmVhODQ3OTVjMjBlZmNmOTNmYjkiLCJzZXFubyI6ODExMzM3fSwicHJldiI6IjE2YjlmNWMyODdkYjBhYTg5YzFkMDY5NTQyMmE5NzY5NWQyN2VhODU0NzA4OTI3NmNmMDY2ZTQ1NzA4Zjk4ZWMiLCJzZXFubyI6MjEsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA72MRMPTpgJIXkFYNX0WnhKqScYyyo2XLr8VZsmLk/6jUnVH5s964EIzUR3ISeYBXd+O6d6se3nvhWsJhXvm3CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJh56RNtH6+4n6H0kXK+R2PC8P24IVkTa26vprRbCh1Ko3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/felipeelias
+
+==================================================================
