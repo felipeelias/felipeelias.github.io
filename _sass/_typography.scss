@@ -211,10 +211,11 @@ pre {
   font-size: .8rem;
   line-height: 1.4;
   white-space: pre;
-  white-space: pre-wrap;
+  // white-space: pre-wrap;
   word-break: break-all;
   // word-wrap: break-word;
   background-color: $code-background-color;
+  overflow-x: scroll;
 }
 
 pre code {
