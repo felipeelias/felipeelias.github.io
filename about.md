@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 ---
 
-I'm from Brazil and I don't like football 😀. I live in Kraków and work at [BaseLab](https://lab.getbase.com/).
+I'm from Brazil and I don't like football 😀. I live in Kraków and work at [AirHelp](https://www.airhelp.com).
 
 Check out my projects and what I've been working on in my [projects page][projects].
 
