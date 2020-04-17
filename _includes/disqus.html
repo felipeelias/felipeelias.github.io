@@ -2,7 +2,7 @@
 var disqus_config = function () {
   this.page.url = '{{ page.url | prepend: site.url }}';
   this.page.identifier = '{{ page.url }}';
-  this.page.title = '{{ page.title }}';
+  this.page.title = '{{ page.title | replace: "'", "\\'" }}';
 };
 (function() {
 var d = document, s = d.createElement('script');
