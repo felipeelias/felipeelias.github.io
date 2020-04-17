@@ -105,9 +105,9 @@ Alternatively, you may implement a [Cron] task that periodically sends a bunch o
 
 ## Taking A Step Back
 
-This is a trivial example and reality is much more complicated. So let's take a step back and look at the fundamentals discussed in this post. If you understand them well, chances are that you'll be able to apply the thought process to numerous situations instead of relying on technologic specific solutions.
+This is a trivial example and reality is much more complicated. So let's take a step back and look at the fundamentals discussed in this post. If you understand them well, chances are that you'll be able to apply the thought process to numerous situations instead of relying on technological specific solutions.
 
-The fundamentals are the following.
+The fundamentals are the following:
 
 ### Dual Writes
 
@@ -115,7 +115,7 @@ The example we've seen is a simplification of the dual-writes problem. Whenever 
 
 ### Outbox pattern
 
-We also have seen how to guarantee that the email is scheduled when the user is created by separating the creation of the email "intention" from the sending. The database guarantees that the user and email intention are written correctly via its ACID guarantees.
+We also have seen how to guarantee that the email is scheduled when the user is created by separating the creation of the email "intention" from the sending. The database ensures that the user and email intention are written correctly via its ACID guarantees.
 
 This is also a simplification of the Outbox Pattern, which is used in a much broader context.
 
@@ -127,7 +127,13 @@ There is a hidden benefit of modeling the email intention this way. We're conver
 
 [Redis] being unavailable is not a problem anymore. Well, actually I cheated. In the end, I removed [Redis] (and [Sidekiq]) from the initial flow.
 
-By accident, we achieved a simpler design.
+Edit: It's worth to point out that this solution is not perfect and there are few points to consider:
+
+1. The worker that is pulling out emails to send is synchronous and you'll need to think about parallelizing it. On the other hand, [Sidekiq] is good at doing that.
+2. You'll need to think about failures when executing the sending of the email, retries and dead jobs. Again, [Sidekiq] is good at that.
+3. We introduced load to the database when fetching unsent emails, which means that you need to consider where to add proper indexes.
+
+Take those points into consideration to understand whether this solution applies to you.
 
 ## Conclusion
 
