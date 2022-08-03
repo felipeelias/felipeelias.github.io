@@ -1,5 +1,5 @@
 name: this is fine
-description: technical blog about programming and sowftware engineering
+description: technical blog about programming and software engineering
 author:
   name: Felipe Philipp
   twitter: felipeelias
@@ -42,14 +42,12 @@ sass:
   sass_dir: _sass
   style: :compressed
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
-  -
-    scope:
+  - scope:
       path: ""
       type: "posts"
     values:
@@ -58,7 +56,7 @@ defaults:
       path: ""
     values:
       image: /assets/icon.jpg
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-mentions
   - jekyll-seo-tag
