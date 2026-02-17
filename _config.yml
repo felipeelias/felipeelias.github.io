@@ -16,8 +16,10 @@ url: https://felipeelias.github.io
 logo: /assets/icon.jpg
 baseurl:
 timezone: Europe/Warsaw
-paginate: 10
-paginate_path: /page:num/
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: /page:num/
 markdown: kramdown
 kramdown:
   input: GFM
@@ -34,7 +36,7 @@ nav:
     url:  "https://github.com/felipeelias"
 sass:
   sass_dir: _sass
-  style: :compressed
+  style: compressed
 defaults:
   - scope:
       path: ""
@@ -51,7 +53,7 @@ defaults:
     values:
       image: /assets/icon.jpg
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-mentions
   - jekyll-seo-tag
   - jekyll-sitemap
