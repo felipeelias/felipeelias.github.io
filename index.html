@@ -5,32 +5,38 @@ pagination:
 ---
 {% include header.html %}
 
+<div class="intro">
+  <p>{{ site.description }}</p>
+</div>
+
 <div class="list">
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
 {% else %}
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
-  <div class="list-post">
+  {% assign post_words = post.content | number_of_words %}
+  {% assign post_minutes = post_words | divided_by: 200 %}
+  {% if post_minutes < 1 %}{% assign post_minutes = 1 %}{% endif %}
+  <div class="list-post{% if post.type == 'note' %} list-post--note{% endif %}">
     {% if post.link %}
     <a href="{{ post.link }}">
     {% else %}
     <a href="{{ post.url | prepend: site.baseurl }}">
-    {% endif %}  
+    {% endif %}
       <div class="list-post-date">
-        <time>{{ post.date | date_to_string }}</time>
+        <time>{{ post.date | date_to_string }}</time> · {{ post_minutes }} min read
+        {% if post.type == "note" %}<span class="list-post-label">note</span>{% endif %}
       </div>
       <div class="list-post-title">
         {{ post.title }}
       </div>
-      {% if post.description %}
+      {% if post.type != "note" and post.description %}
       <div class="list-post-desc">
         {{ post.description }}
       </div>
       {% endif %}
     </a>
-
-
   </div>
 {% endfor %}
   <!-- Pagination links -->

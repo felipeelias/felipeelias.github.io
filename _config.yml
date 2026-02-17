@@ -1,10 +1,11 @@
 name: this is fine
-description: technical blog about programming and software engineering
+description: writing about software engineering, leadership, and AI
 author:
   name: Felipe Philipp
   x: felipeelias
   github: felipeelias
   linkedin: felipeelias
+  bluesky: yerba.bsky.social
 social:
   name: Felipe Philipp
   links:
@@ -27,13 +28,11 @@ kramdown:
 nav:
   - name: "About"
     url:  "/about"
-  - name: "Projects"
-    url:  "/projects"
   - name: "Archive"
     url:  "/archive"
   - name: "Tags"
     url:  "/tags"
-  - name: "Github"
+  - name: "GitHub"
     url:  "https://github.com/felipeelias"
 sass:
   sass_dir: _sass

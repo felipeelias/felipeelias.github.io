@@ -157,6 +157,11 @@ body {
 .list {
   &-post {
     padding: 4% 2%;
+    border-bottom: 1px solid var(--color-border);
+
+    &:last-child {
+      border-bottom: none;
+    }
 
     &:hover {
       background-color: $background-over-color;
@@ -189,6 +194,24 @@ body {
       color: var(--color-base-lighten-20);
       margin-bottom: .25rem;
       font-size: 1rem;
+    }
+
+    &-label {
+      display: inline-block;
+      font-size: .65rem;
+      padding: 1px 6px;
+      margin-left: .5rem;
+      border-radius: 3px;
+      background-color: var(--color-base-lighten-50);
+      color: var(--color-tag-text);
+      text-transform: lowercase;
+      vertical-align: middle;
+    }
+
+    &--note {
+      .list-post-title {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -383,5 +406,53 @@ body {
 
   .icon-moon {
     display: block;
+  }
+}
+
+
+/*--------------
+  Intro
+  -------------- */
+.intro {
+  margin-bottom: 1rem;
+  padding: 0 2%;
+  color: var(--color-base-lighten-20);
+  font-size: 1rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+
+/*--------------
+  Share buttons
+  -------------- */
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.share-btn {
+  display: inline-block;
+  font-size: .75rem;
+  padding: .3rem .7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: $base-color;
+  background: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: $base-font;
+  line-height: 1.4;
+
+  &:hover {
+    background-color: $background-over-color;
+    text-decoration: none;
   }
 }

@@ -1,0 +1,6 @@
+<div class="share-buttons">
+  <button class="share-btn share-copy" onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}').then(function(){var b=document.querySelector('.share-copy');b.textContent='Copied!';setTimeout(function(){b.textContent='Copy link'},2000)})">Copy link</button>
+  <a class="share-btn" href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on X</a>
+  <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on LinkedIn</a>
+  <a class="share-btn" href="https://bsky.app/intent/compose?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on Bluesky</a>
+</div>

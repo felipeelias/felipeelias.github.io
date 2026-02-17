@@ -3,12 +3,10 @@ title: About
 permalink: /about/
 ---
 
-I'm from Brazil and I don't like football 😀. I live in Kraków and work at [AirHelp](https://www.airhelp.com).
+I'm a Staff Software Engineer at [Clipboard Health](https://www.clipboardhealth.com).
 
-Check out my projects and what I've been working on in my [projects page][projects].
+I (try to) write about software engineering, AI, and engineering leadership.
 
 ![My helpful screenshot](/assets/this-is-fine.gif)
 
 [Source: http://gunshowcomic.com/648](http://gunshowcomic.com/648)
-
-[projects]: /projects
