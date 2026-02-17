@@ -76,5 +76,5 @@ end # task :draft
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll serve -w"
+  system "bundle exec jekyll serve -w"
 end # task :preview
