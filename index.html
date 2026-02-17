@@ -38,8 +38,7 @@ pagination:
     <span class="list-pagination-previous">
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
-          <i class="fa fa-angle-left" aria-hidden="true"></i>
-          Previous
+          &laquo; Previous
         </a>
       {% else %}
 
@@ -49,8 +48,7 @@ pagination:
     <span class="list-pagination-next">
       {% if paginator.next_page %}
         <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
-          Next
-          <i class="fa fa-angle-right" aria-hidden="true"></i>
+          Next &raquo;
         </a>
       {% else %}
 
