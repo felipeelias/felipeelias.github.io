@@ -10,8 +10,9 @@ social:
   links:
     - https://x.com/felipeelias
     - https://www.linkedin.com/in/felipeelias
-disqus:
-  id: thisisfine
+giscus:
+  repo_id: PLACEHOLDER_REPO_ID
+  category_id: PLACEHOLDER_CATEGORY_ID
 url: https://felipeelias.github.io
 logo: /assets/icon.jpg
 baseurl:
