@@ -11,17 +11,69 @@ $code-gist-font: Menlo, Monaco, "Courier New", monospace !important;
 
 
 /*--------------
-  Color
+  Color (CSS Custom Properties)
   -------------- */
-$base-color: rgba(#333,0.8);
-$base-lighten-color: lighten($base-color, 50);
 
-$background-color: #fff;
-$background-over-color: #f5f7f9;
+:root {
+  --color-base: rgba(51, 51, 51, 0.8);
+  --color-base-lighten-20: rgba(102, 102, 102, 0.8);
+  --color-base-lighten-40: rgba(153, 153, 153, 0.8);
+  --color-base-lighten-50: rgba(179, 179, 179, 0.8);
+  --color-base-lighten-60: rgba(204, 204, 204, 0.8);
+  --color-background: #fff;
+  --color-background-over: #f5f7f9;
+  --color-text: #333;
+  --color-text-heading: #333;
+  --color-text-heading-h6: #aaa;
+  --color-text-strong: #333;
+  --color-text-abbr: #555;
+  --color-link: #268bd2;
+  --color-code: #bf616a;
+  --color-code-bg: #f9f9f9;
+  --color-border: #e5e5e5;
+  --color-border-hr: #eee;
+  --color-table-border: #e5e5e5;
+  --color-table-bg: #f9f9f9;
+  --color-blockquote: #999;
+  --color-tag-text: #fff;
+}
 
-$text-color: #333;
-$link-color: #268bd2;
-$code-color: #bf616a;
-$code-background-color: #f9f9f9;
-$table-border-color: #e5e5e5;
-$table-background-color: #f9f9f9;
+[data-theme="dark"] {
+  --color-base: rgba(201, 209, 217, 0.8);
+  --color-base-lighten-20: rgba(154, 163, 173, 0.8);
+  --color-base-lighten-40: rgba(109, 118, 129, 0.8);
+  --color-base-lighten-50: rgba(88, 97, 105, 0.8);
+  --color-base-lighten-60: rgba(68, 76, 86, 0.8);
+  --color-background: #1a1d23;
+  --color-background-over: #21252d;
+  --color-text: #c9d1d9;
+  --color-text-heading: #e6edf3;
+  --color-text-heading-h6: #768390;
+  --color-text-strong: #e6edf3;
+  --color-text-abbr: #8b949e;
+  --color-link: #58a6ff;
+  --color-code: #f47067;
+  --color-code-bg: #262a31;
+  --color-border: #30363d;
+  --color-border-hr: #30363d;
+  --color-table-border: #30363d;
+  --color-table-bg: #262a31;
+  --color-blockquote: #768390;
+  --color-tag-text: #e6edf3;
+}
+
+/*--------------
+  SCSS Variable Bridges
+  -------------- */
+$base-color: var(--color-base);
+$base-lighten-color: var(--color-base-lighten-50);
+
+$background-color: var(--color-background);
+$background-over-color: var(--color-background-over);
+
+$text-color: var(--color-text);
+$link-color: var(--color-link);
+$code-color: var(--color-code);
+$code-background-color: var(--color-code-bg);
+$table-border-color: var(--color-table-border);
+$table-background-color: var(--color-table-bg);

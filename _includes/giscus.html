@@ -1,16 +1,22 @@
-<script src="https://giscus.app/client.js"
-  data-repo="felipeelias/felipeelias.github.io"
-  data-repo-id="MDEwOlJlcG9zaXRvcnk1MTMxODQ5NA=="
-  data-category="Blog Comments"
-  data-category-id="DIC_kwDOAw8O3s4C2o4_"
-  data-mapping="pathname"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="preferred_color_scheme"
-  data-lang="en"
-  data-loading="lazy"
-  crossorigin="anonymous"
-  async>
+<script>
+  (function() {
+    var theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    var script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', 'felipeelias/felipeelias.github.io');
+    script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnk1MTMxODQ5NA==');
+    script.setAttribute('data-category', 'Blog Comments');
+    script.setAttribute('data-category-id', 'DIC_kwDOAw8O3s4C2o4_');
+    script.setAttribute('data-mapping', 'pathname');
+    script.setAttribute('data-strict', '0');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-emit-metadata', '0');
+    script.setAttribute('data-input-position', 'bottom');
+    script.setAttribute('data-theme', theme);
+    script.setAttribute('data-lang', 'en');
+    script.setAttribute('data-loading', 'lazy');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+    document.currentScript.parentNode.appendChild(script);
+  })();
 </script>

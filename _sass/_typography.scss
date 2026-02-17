@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
   font-weight: 600;
   line-height: 1.1;
-  color: #333;
+  color: var(--color-text-heading);
   letter-spacing: -.025rem;
 }
 
@@ -60,7 +60,7 @@ h5{
 
 h6 {
   font-size: 1rem;
-  color: #aaa;
+  color: var(--color-text-heading-h6);
 }
 
 /*--------------
@@ -157,33 +157,33 @@ ol + h3 {
 
 hr {
   border: 0;
-  border-top: .5px solid #eee;
-  border-bottom: .5px solid #eee;
+  border-top: .5px solid var(--color-border-hr);
+  border-bottom: .5px solid var(--color-border-hr);
   margin: 1.5rem auto;
 }
 
 strong {
-  color: #333;
+  color: var(--color-text-strong);
   font-weight: 600;
 }
 
 abbr {
   font-size: 85%;
   font-weight: bold;
-  color: #555;
+  color: var(--color-text-abbr);
   text-transform: uppercase;
 }
 
 abbr[title] {
   cursor: help;
-  border-bottom: 1px dotted #e5e5e5;
+  border-bottom: 1px dotted var(--color-border);
 }
 
 blockquote {
   padding: 0 0 0 1.5rem;
   margin: 0 2rem 1rem 0;
-  color: #999;
-  border-left: .5rem solid #e5e5e5;
+  color: var(--color-blockquote);
+  border-left: .5rem solid var(--color-border);
 
   p:last-child {
     margin-bottom: 0;

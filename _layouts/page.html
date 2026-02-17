@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
-<header>
+<header class="header-small-container">
   <h1 class="header-small">
     <a href="{{site.url}}{{site.baseurl}}">{{ site.name }}</a>
   </h1>
+  {% include theme-toggle.html %}
 </header>
 <div class="page">
   <h1 class="page-title">{{ page.title }}</h1>

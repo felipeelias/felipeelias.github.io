@@ -52,14 +52,14 @@ body {
     }
 
     span {
-      color: lighten($base-color, 60);
+      color: var(--color-base-lighten-60);
     }
 
   }
 
   &-nav {
     a {
-      color: lighten($base-color, 50);
+      color: var(--color-base-lighten-50);
       font-weight: 300;
       text-transform: lowercase;
       -webkit-transition: all .2s ease;
@@ -81,7 +81,7 @@ body {
 
 .header-small {
   text-align: left;
-  margin-bottom: .75rem;
+  margin-bottom: 0;
   font-size: .75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -130,7 +130,7 @@ body {
       display: inline-block;
       margin: 4px;
       margin-left: 0px;
-      color: #fff;
+      color: var(--color-tag-text);
       background-color: $base-lighten-color;
       text-decoration: none;
       border-radius: 3px;
@@ -186,7 +186,7 @@ body {
     }
 
     &-desc {
-      color: lighten($base-color, 20);
+      color: var(--color-base-lighten-20);
       margin-bottom: .25rem;
       font-size: 1rem;
     }
@@ -243,8 +243,8 @@ body {
     a {
       display: inline-block;
       margin: 1px 4px;
-      color: #fff;
-      background-color: lighten($base-color, 50);
+      color: var(--color-tag-text);
+      background-color: var(--color-base-lighten-50);
       border-radius: 3px;
 
       span {
@@ -253,12 +253,12 @@ body {
       }
 
       .count {
-        background-color: lighten($base-color, 40);
+        background-color: var(--color-base-lighten-40);
         border-radius: 0 3px 3px 0;
       }
 
       &:hover {
-        background-color: lighten($base-color, 40);
+        background-color: var(--color-base-lighten-40);
       }
     }
   }
@@ -335,5 +335,53 @@ body {
       color: $base-color;
       margin: 4px;
     }
+  }
+}
+
+
+/*--------------
+  Header small container (post/page)
+  -------------- */
+.header-small-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+
+/*--------------
+  Theme toggle
+  -------------- */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: $base-color;
+  line-height: 1;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  .icon-moon {
+    display: none;
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .icon-sun {
+    display: none;
+  }
+
+  .icon-moon {
+    display: block;
   }
 }
