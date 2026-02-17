@@ -2,18 +2,15 @@ name: this is fine
 description: technical blog about programming and software engineering
 author:
   name: Felipe Philipp
-  twitter: felipeelias
+  x: felipeelias
   github: felipeelias
   linkedin: felipeelias
 social:
   name: Felipe Philipp
   links:
-    - https://twitter.com/felipeelias
+    - https://x.com/felipeelias
     - https://www.linkedin.com/in/felipeelias
-    - https://plus.google.com/+FelipeEliasPhilipp
     - https://www.instagram.com/felipeelias
-twitter:
-  username: felipeelias
 disqus:
   id: thisisfine
 url: https://felipeelias.github.io
@@ -61,4 +58,4 @@ plugins:
   - jekyll-sitemap
 exclude: [vendor]
 jekyll-mentions:
-  base_url: https://twitter.com
+  base_url: https://x.com
