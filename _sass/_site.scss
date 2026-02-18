@@ -58,6 +58,11 @@ body {
   }
 
   &-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .25rem;
+
     a {
       color: var(--color-base-lighten-50);
       font-weight: 300;
@@ -72,9 +77,6 @@ body {
         text-decoration: none;
       }
 
-      +a {
-        margin-left: .25rem;
-      }
     }
   }
 }
