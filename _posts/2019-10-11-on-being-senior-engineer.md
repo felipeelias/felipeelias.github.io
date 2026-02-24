@@ -6,6 +6,7 @@ description: "Thoughts on being a Senior Software Engineer"
 tags: career
 categories: career
 comments: true
+archived: true
 ---
 
 > SE means Software Engineer, Developer or Programmer.

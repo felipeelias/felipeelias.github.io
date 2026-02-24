@@ -6,6 +6,7 @@ description: "Fast processing of large files in Ruby with low memory consumption
 tags: ruby
 categories: ruby
 comments: true
+archived: true
 ---
 
 I was asked what was the optimal way to process files in [Ruby][ruby]. I had some assumptions, but they turn out to be wrong 😁, so I'm writing this post for future reference (and for anyone out there interested on it).

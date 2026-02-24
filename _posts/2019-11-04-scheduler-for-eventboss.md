@@ -6,6 +6,7 @@ description: "Eventboss is a Pub/Sub built on top of SNS and SQS. This is the ra
 tags: [ruby, aws, sqs, eventboss, refactoring, threadpool, scheduler]
 categories: ruby
 comments: true
+archived: true
 ---
 
 > Eventboss is a Pub/Sub built on top of SNS and SQS. It's one of the main components used in AirHelp to handle service-to-service communication. In this post, I'll go through the internals of the subscriber component, which handles consuming messages from SQS.

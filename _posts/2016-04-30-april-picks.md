@@ -6,6 +6,7 @@ description: "Interesting content from April 2016, Erlang, Senior Engineers, Com
 permalink: /2016-april-picks
 tags: picks
 comments: true
+archived: true
 ---
 
 # [Video] Systems that Run Forever Self-heal and Scale

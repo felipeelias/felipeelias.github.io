@@ -6,6 +6,7 @@ description: "Interesting content from March 2016"
 permalink: /march-picks
 tags: picks
 comments: true
+archived: true
 ---
 
 # [Simple Made Easy][talk]

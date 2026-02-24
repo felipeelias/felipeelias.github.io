@@ -6,6 +6,7 @@ description: "Cool stuff from July 2016, Docopt, Git highlight, Reverse engineer
 permalink: /2016-july-picks
 tags: picks
 comments: true
+archived: true
 ---
 
 # [Tool] Zero code option parser

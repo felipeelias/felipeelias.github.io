@@ -6,6 +6,7 @@ description: "How to set sane values for Net::HTTP read and open timeout options
 tags: ruby
 categories: ruby
 comments: true
+archived: true
 ---
 
 Ruby's `Timeout` [is considered dangerous][1]! That's sad because I have tons of HTTP requests wrapped in `Timeout::timeout {}` and it seems that the alternative out there is to use `open_timeout` and/or `read_timeout`. My quest is to understand how to use them because they don't work _exactly_ the same as wrapping your HTTP request into a `Timeout` block.

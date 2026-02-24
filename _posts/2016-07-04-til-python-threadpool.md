@@ -6,6 +6,7 @@ description: "TIL how to use a threadpool in Python"
 permalink: /til-python-threadpool
 tags: [til, python]
 comments: true
+archived: true
 ---
 
 I'm not very proficient in [Python][python] yet, but while playing with it, I felt the need to do a bunch of API calls concurrently.

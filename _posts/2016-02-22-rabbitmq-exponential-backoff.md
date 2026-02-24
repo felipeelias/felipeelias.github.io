@@ -6,6 +6,7 @@ description: "How to create a proper retry mechanism on top of RabbitMQ using ex
 tags: rabbitmq
 categories: rabbitmq
 comments: true
+archived: true
 ---
 
 _Update: As pointed out in the comments by Bryan, you should consider whether the TTL times you'll need are not very long, since per-message TTL have some [caveats][caveats]. The messages get expired only when they hit the head of the queue. For example, if you have a message with 1h TTL on the head of the queue, messages after that will expire only after the one in the head is._

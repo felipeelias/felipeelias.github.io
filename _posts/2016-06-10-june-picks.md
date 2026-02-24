@@ -6,6 +6,7 @@ description: "Interesting content from June 2016, Rails has won, Laws of softwar
 permalink: /2016-june-picks
 tags: picks
 comments: true
+archived: true
 ---
 
 # [Article] Rails has won

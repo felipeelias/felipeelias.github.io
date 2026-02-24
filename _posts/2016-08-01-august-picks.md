@@ -6,6 +6,7 @@ description: "Cool stuff from August & September 2016 - Fonts with ligatures, pr
 permalink: /2016-august-september-picks
 tags: picks
 comments: true
+archived: true
 ---
 
 # [Tool] Fonts with ligatures

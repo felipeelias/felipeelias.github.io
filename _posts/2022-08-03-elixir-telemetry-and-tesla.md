@@ -7,6 +7,7 @@ description: >-
 tags: [elixir, tesla, telemetry]
 categories: elixir
 comments: true
+archived: true
 ---
 
 Tesla provides a [Telemetry] middleware which is pretty straightforward to configure for your clients. However, I find that the middleware on its own is not sufficient to get more **detailed metrics**.

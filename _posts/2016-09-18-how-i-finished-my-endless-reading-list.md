@@ -6,6 +6,7 @@ description: "Steps I took to finish my endless reading list"
 permalink: /how-i-finished-my-reading-list
 tags: productivity
 comments: true
+archived: true
 ---
 
 I keep all my reading list on [Pocket][getpocket], which is a great app for that. I got the Chrome extension, mobile app and even an [integration on IFTTT][ifttt] that saves all my liked tweets to Pocket.

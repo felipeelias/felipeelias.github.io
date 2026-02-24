@@ -6,6 +6,7 @@ description: "Install older version of MySQL (5.5) and mysql2 gem with homebrew"
 tags: [mysql, ruby]
 categories: mysql
 comments: true
+archived: true
 ---
 
 The current version of MySQL on homebrew is `5.7`. If you need to install a previous version of the

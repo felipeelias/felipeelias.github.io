@@ -1,7 +1,5 @@
 ---
 layout: default
-pagination:
-  enabled: true
 ---
 {% include header.html %}
 
@@ -10,11 +8,11 @@ pagination:
 </div>
 
 <div class="list">
-{% if site.posts.size == 0 %}
+{% assign posts = site.posts | where_exp: "post", "post.archived != true" %}
+{% if posts.size == 0 %}
   <h2>No post found</h2>
 {% else %}
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
+{% for post in posts %}
   {% assign post_words = post.content | number_of_words %}
   {% assign post_minutes = post_words | divided_by: 200 %}
   {% if post_minutes < 1 %}{% assign post_minutes = 1 %}{% endif %}
@@ -39,28 +37,5 @@ pagination:
     </a>
   </div>
 {% endfor %}
-  <!-- Pagination links -->
-  <div class="list-pagination">
-    <span class="list-pagination-previous">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous">
-          &laquo; Previous
-        </a>
-      {% else %}
-
-      {% endif %}
-    </span>
-
-    <span class="list-pagination-next">
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next">
-          Next &raquo;
-        </a>
-      {% else %}
-
-      {% endif %}
-    </span>
-
-  </div>
 {% endif %}
 </div>

@@ -16,6 +16,6 @@ rake draft title="Title" # New draft in _drafts/
 - **Config:** `_config.yml` — settings, navigation, plugins, defaults
 - **Layouts:** `default.html` → `page.html` / `post.html`
 - **Styles:** SASS in `_sass/`, compiled via `assets/css/main.scss`
-- **Plugins:** jekyll-paginate-v2, jekyll-mentions, jekyll-seo-tag, jekyll-sitemap
+- **Plugins:** jekyll-mentions, jekyll-seo-tag, jekyll-sitemap
 - **Comments:** Giscus (per-post opt-in via `comments: true` in front matter)
 - **Deployment:** Push to `main` → `.github/workflows/jekyll.yml`

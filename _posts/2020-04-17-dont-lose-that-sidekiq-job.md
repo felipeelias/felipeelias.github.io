@@ -7,6 +7,7 @@ description: >-
 tags: [ruby, sidekiq]
 categories: ruby
 comments: true
+archived: true
 ---
 
 Many of you have already encountered during your software development career, the following task:

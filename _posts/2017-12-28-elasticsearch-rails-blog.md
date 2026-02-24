@@ -6,6 +6,7 @@ description: "How to index multiple models in Elasticsearch using elasticsearch-
 tags: ruby
 categories: ruby
 comments: true
+archived: true
 ---
 
 One of the biggest advantages of using [Elasticsearch][es] it is because it's fast even if you have very complex documents with many attributes coming from different models.
