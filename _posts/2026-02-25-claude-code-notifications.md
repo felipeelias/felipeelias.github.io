@@ -2,6 +2,7 @@
 layout: post
 title: "Perfect Claude Code Notifications Setup with Tailscale and ntfy"
 date: 2026-02-25
+description: "Get phone notifications when Claude Code needs your input, using a self-hosted ntfy server over Tailscale."
 tags: [claude-code, tailscale, ntfy, docker]
 comments: true
 ---
