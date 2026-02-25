@@ -1,6 +1,42 @@
 <div class="share-buttons">
-  <button class="share-btn share-copy" onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}').then(function(){var b=document.querySelector('.share-copy');b.textContent='Copied!';setTimeout(function(){b.textContent='Copy link'},2000)})">Copy link</button>
+  <button class="share-btn share-copy" data-url="{{ page.url | absolute_url }}">Copy link</button>
   <a class="share-btn" href="https://x.com/intent/tweet?text={{ page.title | uri_escape }}&url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on X</a>
   <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on LinkedIn</a>
   <a class="share-btn" href="https://bsky.app/intent/compose?text={{ page.title | uri_escape }}%20{{ page.url | absolute_url }}" target="_blank" rel="noopener">Share on Bluesky</a>
 </div>
+<script>
+(function() {
+  var btn = document.querySelector('.share-copy');
+  if (!btn) return;
+  btn.addEventListener('click', function() {
+    var url = btn.getAttribute('data-url');
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function() {
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = 'Copy link'; }, 2000);
+      }).catch(function() {
+        fallbackCopy(url);
+      });
+    } else {
+      fallbackCopy(url);
+    }
+    function fallbackCopy(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        btn.textContent = 'Copied!';
+        setTimeout(function() { btn.textContent = 'Copy link'; }, 2000);
+      } catch (e) {
+        btn.textContent = 'Failed';
+        setTimeout(function() { btn.textContent = 'Copy link'; }, 2000);
+      }
+      document.body.removeChild(ta);
+    }
+  });
+})();
+</script>

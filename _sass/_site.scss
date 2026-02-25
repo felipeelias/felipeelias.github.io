@@ -124,6 +124,11 @@ body {
   &-tag {
     margin-bottom: 1rem;
 
+    ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
     .tag {
       display: inline-block;
       margin: 4px;
@@ -254,6 +259,11 @@ body {
   Tags
   -------------- */
 .tag {
+  &-cloud {
+    padding-left: 0;
+    list-style: none;
+  }
+
   &-index {
     font-size: .75rem;
     display: inline;
@@ -289,6 +299,11 @@ body {
     font-weight: 600;
     text-transform: lowercase;
     padding-top: 1rem;
+  }
+
+  &-posts {
+    padding-left: 0;
+    list-style: none;
   }
 
   &-post {

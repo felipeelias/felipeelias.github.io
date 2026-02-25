@@ -12,7 +12,7 @@ permalink: /tags/
 
 {% assign tags_list = site_tags | split:',' | sort %}
 
-<ul>
+<ul class="tag-cloud">
   {% for item in (0..site.tags.size) %}
   {% unless forloop.last %}
     {% capture this_tag %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
@@ -33,7 +33,7 @@ permalink: /tags/
 	<div class="tag-title" id="{{ this_tag }}">
     {{ this_tag }}
   </div>
-		<ul>
+		<ul class="tag-posts">
     {% for post in site.tags[this_tag] %}
     {% if post.title != null %}
       <li class="tag-post">
