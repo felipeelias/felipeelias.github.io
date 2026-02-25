@@ -33,24 +33,27 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem;
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 1.25;
   color: var(--color-text-heading);
   letter-spacing: -.025rem;
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-size: 1.35rem;
 }
 
 h4{
+  margin-top: 1.5rem;
   font-size: 1.3rem;
 }
 
@@ -81,7 +84,7 @@ h6 {
   -------------- */
 
 p {
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
 }
 
 /*--------------
@@ -111,8 +114,8 @@ dd {
 }
 
 ul {
-  list-style: inside circle;
-  padding-left: 0;
+  list-style: outside circle;
+  padding-left: 1.5rem;
 
   li {
     margin-bottom: .25rem;
@@ -120,16 +123,15 @@ ul {
 
   ul,
   ol {
-    list-style: inside;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: .25rem;
     margin-bottom: .5rem;
   }
 }
 
 ol {
-  list-style: inside decimal;
-  padding-left: 0;
+  list-style: outside decimal;
+  padding-left: 1.5rem;
 
   li {
     margin-bottom: .25rem;
@@ -137,7 +139,7 @@ ol {
 
   ul,
   ol {
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: .25rem;
     margin-bottom: .5rem;
   }
@@ -184,6 +186,7 @@ blockquote {
   margin: 0 2rem 1rem 0;
   color: var(--color-blockquote);
   border-left: .5rem solid var(--color-border);
+  font-style: italic;
 
   p:last-child {
     margin-bottom: 0;
@@ -207,15 +210,15 @@ pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  padding: .5rem;
-  font-size: .8rem;
-  line-height: 1.4;
+  padding: 1rem 1.2rem;
+  font-size: .85rem;
+  line-height: 1.6;
   white-space: pre;
-  // white-space: pre-wrap;
-  word-break: break-all;
-  // word-wrap: break-word;
+  word-break: normal;
   background-color: $code-background-color;
-  overflow-x: scroll;
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+  font-variant-ligatures: contextual;
 }
 
 pre code {
