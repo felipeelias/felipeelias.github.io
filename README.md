@@ -1,5 +1,9 @@
 # felipeelias.github.io
 
+[![Deploy](https://github.com/felipeelias/felipeelias.github.io/actions/workflows/jekyll.yml/badge.svg)](https://github.com/felipeelias/felipeelias.github.io/actions/workflows/jekyll.yml)
+[![CI](https://github.com/felipeelias/felipeelias.github.io/actions/workflows/ci.yml/badge.svg)](https://github.com/felipeelias/felipeelias.github.io/actions/workflows/ci.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Ffelipeelias.github.io)](https://felipeelias.github.io)
+
 Personal blog about software engineering, leadership, and AI. Built with Jekyll 4, deployed to GitHub Pages.
 
 ## Setup
