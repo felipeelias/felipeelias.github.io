@@ -22,6 +22,8 @@ markdown: kramdown
 kramdown:
   input: GFM
 nav:
+  - name: "Home"
+    url:  "/"
   - name: "About"
     url:  "/about"
   - name: "Archive"

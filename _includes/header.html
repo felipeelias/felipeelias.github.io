@@ -5,9 +5,10 @@
   <nav class="header-nav">
     {% for nav in site.nav %}
     {% assign nav_path = nav.url | prepend: site.baseurl %}
+    {% assign nav_path_slash = nav_path | append: "/" %}
     {% if nav.url contains 'http://' or nav.url contains 'https://' %}
     <a href="{{ nav.url }}">{{ nav.name }}</a>
-    {% elsif page.url == nav_path or page.url == nav_path | append: "/" %}
+    {% elsif page.url == nav_path or page.url == nav_path_slash %}
     <a href="{{ nav_path }}" class="active">{{ nav.name }}</a>
     {% else %}
     <a href="{{ nav_path }}">{{ nav.name }}</a>
