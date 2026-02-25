@@ -26,7 +26,7 @@ The only thing you need is a Tailscale account and [Docker][docker] for that. If
 
 Here are the files you'll need:
 
-```
+```text
 my-infra/
 ├── .env
 ├── compose.yml
@@ -36,7 +36,7 @@ my-infra/
 
 ## Step 1: Configure [Tailscale ACL][acl-tags]
 
-Go to https://login.tailscale.com/admin/acls and add a `tag:container` tag:
+Go to the [ACL editor][acl-editor] and add a `tag:container` tag:
 
 ```json
 "tagOwners": {
@@ -46,7 +46,7 @@ Go to https://login.tailscale.com/admin/acls and add a `tag:container` tag:
 
 ## Step 2: Create an [OAuth Credential][oauth-clients]
 
-Go to https://login.tailscale.com/admin/settings/trust-credentials to generate a new OAuth credential.
+Go to [Trust & Credentials][ts-credentials] to generate a new OAuth credential.
 
 1. Click **Credential** → **OAuth**
 2. Grant `auth_keys` scope with **write** permission
@@ -137,7 +137,7 @@ docker compose up -d
 
 Give it ~15 seconds for the TLS certificate to be provisioned. ntfy is now available at `https://ntfy.<your-tailnet>.ts.net` from any device on your tailnet.
 
-**Tip:** Your tailnet name (the `taila2944f` part) can be changed to something more readable at https://login.tailscale.com/admin/dns. Also make sure that "HTTPS Certificates" are enabled.
+**Tip:** Your tailnet name (the `taila2944f` part) can be changed to something more readable in [DNS settings][ts-dns]. Also make sure that "HTTPS Certificates" are enabled.
 
 ## Step 6: Subscribe on Your Phone
 
@@ -263,23 +263,26 @@ If all is working you should see this:
 
 If the notification says "New message", make sure that all devices (including your phone) are on the same Tailscale network. If they are and you're still not getting notifications, you can always ask Claude to help you debug it.
 
-[claude-code]: https://code.claude.com/docs
-[notification-hook]: https://code.claude.com/docs/en/hooks
-[iterm2]: https://iterm2.com
-[kitty]: https://sw.kovidgoyal.net/kitty/
-[ghostty]: https://ghostty.org
-[ntfy]: https://ntfy.sh
-[tailscale]: https://tailscale.com
-[docker]: https://www.docker.com
-[jq]: https://jqlang.org/
-[terminal-notifier]: https://github.com/julienXX/terminal-notifier
+[acl-editor]: https://login.tailscale.com/admin/acls
 [acl-tags]: https://tailscale.com/kb/1068/acl-tags
-[oauth-clients]: https://tailscale.com/kb/1215/oauth-clients
-[ts-docker]: https://tailscale.com/docs/features/containers/docker
-[ts-serve]: https://tailscale.com/kb/1312/serve
-[ntfy-upstream]: https://docs.ntfy.sh/config/#upstream-ntfysh
-[ts-image]: https://hub.docker.com/r/tailscale/tailscale
-[ntfy-image]: https://hub.docker.com/r/binwiederhier/ntfy
-[ntfy-android]: https://play.google.com/store/apps/details?id=io.heckel.ntfy
-[ntfy-ios]: https://apps.apple.com/us/app/ntfy/id1625396347
+[claude-code]: https://code.claude.com/docs
+[docker]: https://www.docker.com
+[ghostty]: https://ghostty.org
+[iterm2]: https://iterm2.com
+[jq]: https://jqlang.org/
+[kitty]: https://sw.kovidgoyal.net/kitty/
 [minecraft-parkour]: https://www.youtube.com/watch?v=OqPxaKs8xrk
+[notification-hook]: https://code.claude.com/docs/en/hooks
+[ntfy]: https://ntfy.sh
+[ntfy-android]: https://play.google.com/store/apps/details?id=io.heckel.ntfy
+[ntfy-image]: https://hub.docker.com/r/binwiederhier/ntfy
+[ntfy-ios]: https://apps.apple.com/us/app/ntfy/id1625396347
+[ntfy-upstream]: https://docs.ntfy.sh/config/#upstream-ntfysh
+[oauth-clients]: https://tailscale.com/kb/1215/oauth-clients
+[tailscale]: https://tailscale.com
+[terminal-notifier]: https://github.com/julienXX/terminal-notifier
+[ts-credentials]: https://login.tailscale.com/admin/settings/trust-credentials
+[ts-dns]: https://login.tailscale.com/admin/dns
+[ts-docker]: https://tailscale.com/docs/features/containers/docker
+[ts-image]: https://hub.docker.com/r/tailscale/tailscale
+[ts-serve]: https://tailscale.com/kb/1312/serve

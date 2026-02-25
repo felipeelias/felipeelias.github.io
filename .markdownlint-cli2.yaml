@@ -1,0 +1,13 @@
+config:
+  # Disable line length — tables and URLs make strict wrapping impractical
+  MD013: false
+  # Title comes from front matter, not the first line
+  MD041: false
+
+globs:
+  - "**/*.md"
+
+ignores:
+  - "_site/**"
+  # Archived posts predate linting
+  - "_posts/201*.md"
