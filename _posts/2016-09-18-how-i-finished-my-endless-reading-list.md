@@ -21,7 +21,7 @@ I gave it some thought and came up with a solution, and then in around a month I
 
 Definitely, not by reading all of them.
 
-![productivity](/assets/productivity-apps.jpg)
+![productivity](/assets/productivity-apps.webp)
 
 # Understanding why
 

@@ -24,7 +24,7 @@ Git 2.9 [has been released][release] and with it, few nice additions, my favouri
 
 Another addition was a script that puts an extra emphasis on the changed part of line:
 
-![diff-highlight-screenshot](/assets/diff-highlight-git-2-9.jpg)
+![diff-highlight-screenshot](/assets/diff-highlight-git-2-9.webp)
 
 In order to install that, make sure that `diff-highlight` is on your path, since the script is under Git's contrib files. After that, add this to your `~/.gitconfig`
 

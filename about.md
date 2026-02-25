@@ -7,6 +7,6 @@ I'm a Staff Software Engineer at [Clipboard Health](https://www.clipboardhealth.
 
 I (try to) write about software engineering, AI, and engineering leadership.
 
-![My helpful screenshot](/assets/this-is-fine.gif)
+![My helpful screenshot](/assets/this-is-fine.webp)
 
 [Source: http://gunshowcomic.com/648](http://gunshowcomic.com/648)

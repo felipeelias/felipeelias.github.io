@@ -257,7 +257,7 @@ This requires `jq` (`brew install jq`, `apt install jq`, or `winget install jqla
 
 If all is working you should see this:
 
-![ntfy notification on phone](/assets/images/ntfy.png)
+![ntfy notification on phone](/assets/images/ntfy.webp)
 
 ## Troubleshooting
 

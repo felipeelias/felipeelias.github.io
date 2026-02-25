@@ -21,7 +21,7 @@ However, the gem processed messages unevenly because it was reading all messages
 
 To achieve better fairness, I decided to rewrite the consumer part and introduce a new scheduler. Instead of having a shared thread pool for fetching and processing the messages, I decided to separate fetch and process on dedicated thread pools and connect those via an internal queue.
 
-![eventboss-design](/assets/images/eventboss-fetcher-and-workers.png)
+![eventboss-design](/assets/images/eventboss-fetcher-and-workers.webp)
 
 Fetcher's responsibility is to retrieve messages from SQS and push to the internal queue. Each request fetches at most 10 messages at once (which is the SQS limit).
 

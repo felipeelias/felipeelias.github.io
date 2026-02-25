@@ -15,7 +15,7 @@ Link: [https://github.com/tonsky/FiraCode][firacode]
 
 I didn't know that fonts could have ligatures, and this is pretty epic!
 
-![fira-code-screenshot](/assets/fira-code.jpg)
+![fira-code-screenshot](/assets/fira-code.webp)
 
 # [Post] Preprocessing CSV data in Ruby
 

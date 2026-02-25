@@ -15,7 +15,7 @@ giscus:
   repo_id: MDEwOlJlcG9zaXRvcnk1MTMxODQ5NA==
   category_id: DIC_kwDOAw8O3s4C2o4_
 url: https://felipeelias.github.io
-logo: /assets/icon.jpg
+logo: /assets/icon.webp
 baseurl:
 timezone: Europe/Warsaw
 markdown: kramdown
@@ -47,7 +47,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/icon.jpg
+      image: /assets/icon.webp
 plugins:
   - jekyll-mentions
   - jekyll-seo-tag
