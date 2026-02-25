@@ -133,6 +133,41 @@ task :note do
   end
 end # task :note
 
+desc "Convert images to WebP (requires cwebp and gif2webp from brew install webp)"
+task :optimize_images do
+  require 'fileutils'
+
+  %w[assets assets/images].each do |dir|
+    next unless File.directory?(dir)
+
+    Dir.glob(File.join(dir, "*.{jpg,jpeg,png,gif}")).each do |src|
+      dest = src.sub(/\.(jpg|jpeg|png|gif)$/i, '.webp')
+
+      if File.exist?(dest)
+        puts "  skip: #{dest} already exists"
+        next
+      end
+
+      cmd = if src.end_with?('.gif')
+              "gif2webp -lossy -q 80 #{src.shellescape} -o #{dest.shellescape}"
+            else
+              "cwebp -q 80 #{src.shellescape} -o #{dest.shellescape}"
+            end
+
+      if system(cmd)
+        old_size = File.size(src)
+        new_size = File.size(dest)
+        savings = ((1 - new_size.to_f / old_size) * 100).round(1)
+        puts "  #{src} -> #{dest} (#{savings}% smaller)"
+      else
+        puts "  FAILED: #{src}"
+      end
+    end
+  end
+
+  puts "\nDone. Remember to update references in posts and remove the originals."
+end
+
 desc "Launch preview environment"
 task :preview do
   system "bundle exec jekyll serve -w --host 0.0.0.0"

@@ -9,6 +9,7 @@ bundle install           # Install dependencies
 rake preview             # Local server at localhost:4000
 rake post title="Title"  # New post in _posts/
 rake draft title="Title" # New draft in _drafts/
+rake optimize_images     # Convert images to WebP
 ```
 
 ## Architecture
