@@ -10,6 +10,7 @@ rake preview             # Local server at localhost:4000
 rake post title="Title"  # New post in _posts/
 rake draft title="Title" # New draft in _drafts/
 rake optimize_images     # Convert images to WebP
+rake hashnode            # Cross-post to Hashnode (hashnode: true in front matter)
 ```
 
 ## Architecture
@@ -19,4 +20,5 @@ rake optimize_images     # Convert images to WebP
 - **Styles:** SASS in `_sass/`, compiled via `assets/css/main.scss`
 - **Plugins:** jekyll-mentions, jekyll-seo-tag, jekyll-sitemap
 - **Comments:** Giscus (per-post opt-in via `comments: true` in front matter)
+- **Hashnode:** Cross-posting via `rake hashnode` (opt-in via `hashnode: true` in front matter)
 - **Deployment:** Push to `main` → `.github/workflows/jekyll.yml`
