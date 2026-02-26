@@ -168,6 +168,125 @@ task :optimize_images do
   puts "\nDone. Remember to update references in posts and remove the originals."
 end
 
+# Usage: rake hashnode [file="2026-02-25-my-post.md"]
+desc "Cross-post to Hashnode (posts with hashnode: true in front matter)"
+task :hashnode do
+  require 'net/http'
+  require 'json'
+  require 'uri'
+
+  token = ENV["HASHNODE_TOKEN"]
+  publication_id = ENV["HASHNODE_PUBLICATION_ID"]
+  abort("HASHNODE_TOKEN is not set") unless token && !token.empty?
+  abort("HASHNODE_PUBLICATION_ID is not set") unless publication_id && !publication_id.empty?
+
+  site_url = YAML.safe_load_file("_config.yml", permitted_classes: [Time, Date])["url"]
+
+  posts = Dir.glob(File.join(CONFIG['posts'], "*.#{CONFIG['post_ext']}")).select do |f|
+    content = File.read(f)
+    front_matter = YAML.safe_load(content.split("---", 3)[1], permitted_classes: [Time, Date])
+    front_matter["hashnode"] == true
+  end.sort
+
+  abort("No posts with hashnode: true found in #{CONFIG['posts']}") if posts.empty?
+
+  if ENV["file"]
+    chosen = File.join(CONFIG['posts'], ENV["file"])
+    abort("Post not found: #{chosen}") unless File.exist?(chosen)
+  else
+    puts "Eligible posts:"
+    posts.each_with_index { |f, i| puts "  #{i + 1}. #{File.basename(f)}" }
+    print "Pick a post (number): "
+    choice = $stdin.gets.chomp.to_i
+    abort("Invalid choice") if choice < 1 || choice > posts.size
+    chosen = posts[choice - 1]
+  end
+
+  raw = File.read(chosen)
+  parts = raw.split("---", 3)
+  front_matter = YAML.safe_load(parts[1], permitted_classes: [Time, Date])
+  markdown_body = parts[2].strip
+  markdown_body = markdown_body.gsub(%r{(!\[[^\]]*\]\()(/[^)]+)\)}) { "#{$1}#{site_url}#{$2})" }
+
+  basename = File.basename(chosen, ".#{CONFIG['post_ext']}")
+  match = basename.match(/^(\d{4})-(\d{2})-(\d{2})-(.+)$/)
+  abort("Cannot parse filename: #{basename}") unless match
+  year, month, day, slug = match.captures
+  canonical_url = "#{site_url}/#{year}/#{month}/#{day}/#{slug}.html"
+
+  tags = Array(front_matter["tags"]).map do |t|
+    { name: t, slug: t.downcase.gsub(/\s+/, "-") }
+  end
+
+  title = front_matter["title"]
+  puts "Publishing \"#{title}\" to Hashnode..."
+  puts "  Canonical URL: #{canonical_url}"
+
+  uri = URI("https://gql.hashnode.com/")
+  http = Net::HTTP.new(uri.host, uri.port)
+  http.use_ssl = true
+
+  create_draft_query = <<~GRAPHQL
+    mutation CreateDraft($input: CreateDraftInput!) {
+      createDraft(input: $input) {
+        draft { id }
+      }
+    }
+  GRAPHQL
+
+  draft_input = {
+    title: title,
+    contentMarkdown: markdown_body,
+    publicationId: publication_id,
+    originalArticleURL: canonical_url,
+    tags: tags,
+    slug: slug
+  }
+
+  draft_body = { query: create_draft_query, variables: { input: draft_input } }.to_json
+  draft_request = Net::HTTP::Post.new(uri.path, {
+    "Content-Type" => "application/json",
+    "Authorization" => token
+  })
+  draft_request.body = draft_body
+
+  draft_response = http.request(draft_request)
+  draft_result = JSON.parse(draft_response.body)
+
+  if draft_result["errors"]
+    abort("Failed to create draft: #{draft_result["errors"].map { |e| e["message"] }.join(", ")}")
+  end
+
+  draft_id = draft_result.dig("data", "createDraft", "draft", "id")
+  abort("Failed to create draft: no draft ID returned") unless draft_id
+  puts "  Draft created: #{draft_id}"
+
+  publish_query = <<~GRAPHQL
+    mutation PublishDraft($input: PublishDraftInput!) {
+      publishDraft(input: $input) {
+        post { id, url }
+      }
+    }
+  GRAPHQL
+
+  publish_body = { query: publish_query, variables: { input: { draftId: draft_id } } }.to_json
+  publish_request = Net::HTTP::Post.new(uri.path, {
+    "Content-Type" => "application/json",
+    "Authorization" => token
+  })
+  publish_request.body = publish_body
+
+  publish_response = http.request(publish_request)
+  publish_result = JSON.parse(publish_response.body)
+
+  if publish_result["errors"]
+    abort("Failed to publish draft: #{publish_result["errors"].map { |e| e["message"] }.join(", ")}")
+  end
+
+  post_url = publish_result.dig("data", "publishDraft", "post", "url")
+  puts "  Published: #{post_url}"
+end
+
 desc "Launch preview environment"
 task :preview do
   system "bundle exec jekyll serve -w --host 0.0.0.0"

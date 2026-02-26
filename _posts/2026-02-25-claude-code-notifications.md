@@ -5,6 +5,7 @@ date: 2026-02-25
 description: "Get phone notifications when Claude Code needs your input, using a self-hosted ntfy server over Tailscale."
 tags: [claude-code, tailscale, ntfy, docker]
 comments: true
+hashnode: true
 ---
 
 If you're like me and have been hooked [into running Claude Code on your phone](https://petesena.medium.com/how-to-run-claude-code-from-your-iphone-using-tailscale-termius-and-tmux-2e16d0e5f68b), running several [sessions in parallel like Boris](https://x.com/bcherny/status/2007179833990885678), you may have noticed that it is easy to lose track of what is going on on all those sessions. You may go away for a sec, distracted by [Minecraft parkour videos][minecraft-parkour] and forget that Claude is waiting for your input.
