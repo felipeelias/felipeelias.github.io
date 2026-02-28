@@ -8,7 +8,7 @@ comments: true
 hashnode: true
 ---
 
-If you're like me and have been hooked [into running Claude Code on your phone](https://petesena.medium.com/how-to-run-claude-code-from-your-iphone-using-tailscale-termius-and-tmux-2e16d0e5f68b), running several [sessions in parallel like Boris](https://x.com/bcherny/status/2007179833990885678), you may have noticed that it is easy to lose track of what is going on on all those sessions. You may go away for a sec, distracted by [Minecraft parkour videos][minecraft-parkour] and forget that Claude is waiting for your input.
+If you're like me and have been hooked [into running Claude Code on your phone](https://petesena.medium.com/how-to-run-claude-code-from-your-iphone-using-tailscale-termius-and-tmux-2e16d0e5f68b), running several [sessions in parallel like Boris](https://x.com/bcherny/status/2007179833990885678), you may have noticed that it is easy to lose track of what is going on across all those sessions. You may go away for a sec, distracted by [Minecraft parkour videos][minecraft-parkour] and forget that Claude is waiting for your input.
 
 ## Idea
 
@@ -65,7 +65,7 @@ TS_AUTHKEY=...
 
 ## Step 3: Docker Compose
 
-Your compose will look like below. It uses the [`tailscale/tailscale`][ts-image] and [`binwiederhier/ntfy`][ntfy-image] images and relies on [Tailscale sidecar pattern][ts-docker] where it **exposes your Docker containers as machines** in the tailnet. This is really useful because you can reach the Docker container by name directly, the sidecar will proxy the request, handle HTTPS, etc.
+Your compose will look like below. It uses the [`tailscale/tailscale`][ts-image] and [`binwiederhier/ntfy`][ntfy-image] images and relies on [Tailscale sidecar pattern][ts-docker] where it exposes your Docker containers as machines in the tailnet. This is useful: you can reach the container by name directly, the sidecar proxies the request, handles HTTPS, etc.
 
 ```yaml
 name: my-infra
@@ -139,7 +139,7 @@ docker compose up -d
 
 Give it ~15 seconds for the TLS certificate to be provisioned. ntfy is now available at `https://ntfy.<your-tailnet>.ts.net` from any device on your tailnet.
 
-**Tip:** Your tailnet name (the `taila2944f` part) can be changed to something more readable in [DNS settings][ts-dns]. Also make sure that "HTTPS Certificates" are enabled.
+Your tailnet name (the `taila2944f` part) can be changed to something more readable in [DNS settings][ts-dns]. Also make sure that "HTTPS Certificates" are enabled.
 
 ## Step 6: Subscribe on Your Phone
 
@@ -255,9 +255,9 @@ Make it executable (`chmod +x ~/.claude/hooks/notify.sh`) and add to `~/.claude/
 
 This requires `jq` (`brew install jq`, `apt install jq`, or `winget install jqlang.jq`).
 
-## Putting all together
+## Putting it all together
 
-If all is working you should see this:
+If everything's working, you should see this:
 
 ![ntfy notification on phone](/assets/images/ntfy.webp)
 
