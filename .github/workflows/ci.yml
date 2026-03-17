@@ -11,3 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - uses: DavidAnson/markdownlint-cli2-action@05f32210e84442804257b2a6f20b273450ec8265 # v19
+
+  lint-ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - uses: ruby/setup-ruby@c984c1a20bb35a1cbda04477c816cea024418be9 # v1
+        with:
+          ruby-version: '3.3'
+      - run: gem install rubocop
+      - run: rubocop
