@@ -2,6 +2,7 @@
 
 require "rubygems"
 require 'rake'
+require 'shellwords'
 require 'yaml'
 require 'time'
 
