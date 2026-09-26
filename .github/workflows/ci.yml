@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: DavidAnson/markdownlint-cli2-action@ded1f9488f68a970bc66ea5619e13e9b52e601cd # v23.2.0
+      - name: Install pre-commit
+        run: python -m pip install pre-commit==4.6.2
+      - name: Lint Markdown
+        run: pre-commit run markdownlint-cli2 --all-files --show-diff-on-failure
 
   lint-ruby:
     runs-on: ubuntu-latest

@@ -1,5 +1,8 @@
 repos:
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.17.2
+    rev: v0.23.2
     hooks:
       - id: markdownlint-cli2
+        # Use the configured globs in both local hooks and CI.
+        pass_filenames: false
+        always_run: true
